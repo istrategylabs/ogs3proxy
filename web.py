@@ -11,6 +11,8 @@ REDIRECT_URL = config('REDIRECT_URL')
 OG_TITLE = config('OG_TITLE')
 OG_DESCRIPTION = config('OG_DESCRIPTION')
 
+FB_APP_ID = config('FB_APP_ID')
+
 S3_ROOT = 'https://s3.amazonaws.com/'
 
 app = Flask(__name__)
@@ -32,6 +34,7 @@ def opengraph(path):
             'og_description': OG_DESCRIPTION,
             'og_image': urljoin(S3_ROOT, '{}/{}'.format(S3_BUCKET, path)),
             'og_url': request.base_url,
+            'fb_app_id': FB_APP_ID,
         }
         return render_template('opengraph.html', **context)
 
