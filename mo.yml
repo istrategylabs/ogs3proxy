@@ -1,4 +1,0 @@
-domain: ogs3proxy.herokuapp.com
-heroku:
-  staging: ogs3proxy-staging
-  production: ogs3proxy-prod
