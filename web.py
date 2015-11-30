@@ -31,7 +31,7 @@ def opengraph(path):
             'og_title': OG_TITLE,
             'og_description': OG_DESCRIPTION,
             'og_image': urljoin(S3_ROOT, '{}/{}'.format(S3_BUCKET, path)),
-            'og_url': REDIRECT_URL,
+            'og_url': '/{}'.format(path),
         }
         return render_template('opengraph.html', **context)
 
