@@ -1,0 +1,25 @@
+{
+  "name": "ogs3proxy",
+  "env":{
+    "REDIRECT_URL": {
+      "description": "URL for non-Facebook redirects"
+    },
+    "OG_TITLE": {
+      "description": "Object Open Graph title"
+    },
+    "OG_DESCRIPTION": {
+      "description": "Object Open Graph description"
+    },
+    "S3_BUCKET": {
+      "description": "The S3 bucket to pull images from"
+    },
+    "SECRET_KEY": {
+      "generator": "secret"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-python"
+    }
+  ]
+}
