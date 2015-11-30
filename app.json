@@ -13,6 +13,9 @@
     "S3_BUCKET": {
       "description": "The S3 bucket to pull images from"
     },
+    "FB_APP_ID": {
+      "description": "Facebook app ID"
+    },
     "SECRET_KEY": {
       "generator": "secret"
     }
