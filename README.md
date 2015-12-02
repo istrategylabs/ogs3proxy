@@ -2,6 +2,8 @@
 
 Proxy requests for images on S3 to provide standard Open Graph tags.
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 A request by the Facebook crawler to `http(s)://<domain>/<path>` will generate a unique page for the object stored at `https://s3.amazonaws.com/<bucket>/<path>`. This page contains Open Graph tags and basic page content.
 
 All other user agents will be redirected to the specified redirect URL. To view the page that the Facebook crawler receives, add the `?fb` query string parameter to the end of the URL.

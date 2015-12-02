@@ -1,5 +1,7 @@
 {
   "name": "ogs3proxy",
+  "description": "Proxy images on S3 with common Open Graph tags",
+  "repository": "https://github.com/istrategylabs/ogs3proxy",
   "env":{
     "REDIRECT_URL": {
       "description": "URL for non-Facebook redirects"
