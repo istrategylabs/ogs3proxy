@@ -1,3 +1,5 @@
+import logging
+import uuid
 from decouple import config
 from flask import Flask, redirect, render_template, request
 
@@ -14,7 +16,14 @@ OG_DESCRIPTION = config('OG_DESCRIPTION')
 FB_APP_ID = config('FB_APP_ID')
 
 
-app = Flask(__name__)
+# We kind of have to have a static folder, so generate some random
+# one that should never match an actual S3 path.
+# If it conflicts, restart the process until it doesn't.
+app = Flask(__name__, static_folder=uuid.uuid4().hex)
+
+
+logger = logging.getLogger('ogs3proxy')
+logger.info('Using static folder: {}'.format(app.static_folder))
 
 
 def is_facebook(ua):
