@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="{{ og.title }}" />
-    <meta property="og:description" content="{{ og.description }}" />
+    <meta property="og:title" content="{{ og.title|safe }}" />
+    <meta property="og:description" content="{{ og.description|safe }}" />
     <meta property="og:image" content="{{ og.image }}" />
     <meta property="og:url" content="{{ og.url }}" />
     <meta property="fb:app_id" content="{{ fb.app_id }}" />
   </head>
   <body>
-    <h1>{{ og.title }}</h1>
-    <p>{{ og.description }}
+    <h1>{{ og.title|safe }}</h1>
+    <p>{{ og.description|safe }}
     <img src="{{ og.image }}">
   </body>
 </html>
