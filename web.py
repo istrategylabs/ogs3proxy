@@ -30,6 +30,11 @@ def is_facebook(ua):
     return ua.startswith('facebookexternalhit') or ua == 'Facebot'
 
 
+@app.route("/", methods=['GET'])
+def index():
+    return redirect(REDIRECT_URL)
+
+
 @app.route("/<path:path>", methods=['GET'])
 def opengraph(path):
 
